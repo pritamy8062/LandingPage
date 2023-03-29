@@ -13,7 +13,7 @@ dotenv.config();
 connectDB();
 
 const app = express(); // main thing
-
+app.use(cors());
 app.use(express.json()); // to accept json data
 
 app.use("/api/notes", noteRoutes);
